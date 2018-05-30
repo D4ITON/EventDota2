@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:ARCENA;
+    src:url(../fonts/ARCENA.ttf);
+    
+ 
+}
+@font-face {
+
+   font-family:Petrona-Regular;
+   src:url(../fonts/Petrona-Regular.ttf);
+}
+@font-face {
+
+   font-family:lmroman17-regular;
+   src:url(../fonts/lmroman17-regular.otf);
+}
+@font-face {
+
+   font-family:Poppins-Regular;
+   src:url(../fonts/Poppins-Regular.ttf);
+}
+
+body{
+    background: white;
+    font-family: Petrona-Regular, monospace;
+    font-size: 16px;
+    padding-top: 55px;
+    min-height: 100vh;
+    overflow-x: hidden;/*esto es para que no haya scroll horizontalmente (-)*/
+}
+body::-webkit-scrollbar{
+    width: 9px;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgba(52, 152, 219, 1);
+    border-radius: 5px;
+}
+header{
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.menu{
+    width: 90%;
+    max-width: 1300px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu .logo{
+    display: inline-block;
+    margin-right: 1em;
+}
+.menu .logo img{
+    vertical-align: top;
+    height: 50px;
+}
+.menu .btn-menu{
+    display: none;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1em;
+}
+.menu .logo:hover{background: #fff;}
+.menu .enlaces{
+    display: inline-block;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+}
+.menu .enlaces a{
+    color: hsl(204, 100%, 50%);
+    font-weight: 900;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 17.5px;
+    height: 60px;
+    width: auto;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/backgroundsprite.png) no-repeat left top;
+}
+.menu .enlaces a:first-child {
+    background-position: 0 20px;
+}
+.menu .enlaces a:nth-child(2){
+    background-position: 0 -25px;
+}
+.menu .enlaces a:nth-child(3){
+    background-position: 0 -74px;
+}
+.menu .enlaces a:nth-child(4){
+    background-position: 0 -125px;
+}
+.menu .enlaces a:hover{
+    color: hsl(204, 80%, 26%);
+    font-size: 18px;
+}
+/*-----SECTION MAIN-----*/
+main{
+    padding-top: 10px;
+}
+.titulo{
+    font-size: 20px;
+}
+.descripcion1{
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+/*----SECTION BANNER---*/
+
+/*----SECTION ABOUT---*/
+
+/*----SECTION BENEFICIOS---*/
+
+/*-------efectos del menu-------*/
+.headroom{
+	transition: transform .3s ease;
+}
+.headroom--pinned{
+	transform: translateY(0%);
+}
+.headroom--unpinned{
+	transform: translateY(-100%);
+}
+/*----------------FOOTER----------------*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+    .footer{
+        background-color:#171a1c ;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+    }
+    .footer_descripcion{
+        width: 60%;
+        height: 100%;
+    }
+    .footer_redes{
+        width: 40%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid white;
+    }
+    footer container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer container i{
+        color: white;
+        padding: 10px;
+    }
+    footer container .redes{
+        font-size: 150%;
+        padding-right: 10px;
+    }
+     footer container .redes:hover{
+        font-size: 180%;
+        padding-right: 10px;
+    }
+/*-----------DISEÑO RESPONSIVE----------- 800PX*/
+
+@media screen and (max-width: 800px){
+    header .menu{
+        flex-direction: column;
+    }
+    header .menu .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+    header .menu .logo img{
+        height: 37px
+    }
+    header .menu .logo .btn-menu{
+        display: inline-block;
+        margin-top: 9px;
+        font-size: 1.2em;
+    }
+    header .menu .enlaces{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content:space-around;
+	}
+    header .menu .enlaces a{
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid;
+    }
+    .menu .enlaces a:last-child{
+    border: none;
+    }
+/*    banner fondo*/
+
+/*    fondo responsive*/
+
+/*    descripcion responvise*/
+
+/*    beneficios responsive */
+
+/*    ESTILOS PARA FOOTER    */
+   footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+    .footer{
+        background-color:#171a1c ;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+    }
+    .footer_descripcion{
+        width: 60%;
+        height: 100%;
+    }
+    .footer_redes{
+        width: 40%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid white;
+    }
+    footer container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer container i{
+        color: white;
+        padding: 10px;
+    }
+    footer container .redes{
+        font-size: 130%;
+    }
+}
+
+
+

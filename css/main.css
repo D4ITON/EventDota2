@@ -1,0 +1,706 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:ARCENA;
+    src:url(../fonts/ARCENA.ttf);
+}
+@font-face {
+   font-family:Petrona-Regular;
+   src:url(../fonts/Petrona-Regular.ttf);
+}
+@font-face {
+   font-family:lmroman17-regular;
+   src:url(../fonts/lmroman17-regular.otf);
+}
+@font-face {
+   font-family:Poppins-Regular;
+   src:url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+   font-family:SanFranciscoDisplay-Thin;
+   src:url(../fonts/SanFranciscoDisplay-Thin.ttf);
+}
+@font-face {
+   font-family:SanFranciscoDisplay-Regular;
+   src:url(../fonts/SanFranciscoDisplay-Regular.otf);
+}
+@font-face {
+   font-family:SanFranciscoText-Light;
+   src:url(../fonts/SanFranciscoText-Light.otf);
+}
+
+
+body{
+    background: white;
+    font-family: Petrona-Regular, monospace;
+    font-size: 16px;
+    padding-top: 55px;
+    min-height: 100vh;
+    overflow-x: hidden;/*esto es para que no haya scroll horizontalmente (-)*/
+}
+body::-webkit-scrollbar{
+    width: 9px;
+    background: white;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgba(52, 152, 219, 1);
+    border-radius: 5px;
+}
+header{
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.menu{
+    width: 90%;
+    max-width: 1300px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu .logo{
+    display: inline-block;
+    margin-right: 1em;
+}
+.menu .logo img{
+    vertical-align: top;
+    height: 50px;
+}
+.menu .btn-menu{
+    display: none;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1em;
+}
+.menu .logo:hover{background: #fff;}
+.menu .enlaces{
+    display: inline-block;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+}
+.menu .enlaces a{
+    color: hsl(204, 100%, 50%);
+    font-weight: 900;
+    text-decoration: none;
+    padding-left: 30px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 1em;
+    height: 60px;
+    width: auto;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/backgroundsprite.png) no-repeat left top;
+}
+
+.menu .enlaces a:first-child {
+    background-position: 0 20px;
+}
+.menu .enlaces a:nth-child(2){
+    background-position: 0 -25px;
+}
+.menu .enlaces a:nth-child(3){
+    background-position: 0 -74px;
+}
+.menu .enlaces a:nth-child(4){
+    background-position: 0 -125px;
+}
+.menu .enlaces a:hover{
+    color: hsl(204, 80%, 20%);
+}
+/*---------------------------------SECTION MAIN---------------------------------*/
+/*-------------------------SECTION MAIN-CONTAINER-------------------------*/
+.main_container{
+    display: flex;
+    flex-direction: column;
+}
+/*--------------------------------SECTION BANNER-------------------------------*/
+.imgfondo2{display: none;}
+ .banner .fondo img{
+        height: 100vh;
+        width: 100vw;
+    }
+.banner{
+    margin-top: -28px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: -5px; 
+}
+.fondo_descripcion{
+    position: absolute;
+    width: 100%;
+    margin-top: -260px;
+    text-align: center;
+    color: hsl(180,55%,100%);
+    text-transform: capitalize;
+    font-weight:bold;
+    background: rgba(0,0,0,.6);
+}
+.descipcion_titulo{font-size: 70px;letter-spacing: 2px;    -webkit-text-stroke: .01px rgba(0,0,0,.4);
+}
+.banner_txt{
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom : 1px solid #fff;
+    display: inline;
+    line-height: 35px;
+    padding: 8px;
+    letter-spacing: .03em;
+}
+.banner_txt_1{display: block;margin-bottom: -12px;}
+.banner_txt_2{
+    display: block;
+    margin-top: -12px;
+    padding-bottom: 12px;
+    letter-spacing: .05em;
+}
+/*----------------------------SECTION ABOUT---------------------------*/
+.about{
+    display: flex;
+    width: 100%;
+    padding: 1%;
+    flex-direction: column;
+    align-items:center;
+    background: #ecf0f1;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.about_titulo{
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 25px;
+    width: auto;
+    padding: 8px;
+    display: inline;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: .008em;
+    font-family: 'SanFranciscoText-Light',sans-serif;
+
+}
+.about_descripcion{
+    text-align: center;
+    display: flex;
+    width: 70%;
+    padding-top: 15px;
+    font-size: .9em;
+    padding-bottom: 30px; 
+    letter-spacing: .008em;
+    background: #ecf0f1;
+    color:#000;
+    font-family: 'SanFranciscoDisplay-Thin',sans-serif;
+    letter-spacing: 1px;
+}
+/*-------------------------------SECTION BENEFICIOS------------------------------*/
+
+.beneficios{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    align-self: center;
+    background: #2980b9;
+}
+.beneficios_titulo_seccion{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 8px;
+    letter-spacing: .008em;
+    display: inline-block;
+    color: rgba(255,255,255,.9);
+    border-bottom: 25px;
+    font-family: 'SanFranciscoText-Light',sans-serif;
+    text-transform: uppercase;
+
+}
+.beneficios_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    padding-top: 25px;
+}
+.item{
+    width: 22%;
+    text-align: center;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: .8em;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 4px;
+box-shadow: 5px 5px #888888;
+}
+.item img{ width: 90px;height: 80px;}
+img[src="img/Beneficios_horarios.png"]{
+    width: 40%;
+}
+img[src="img/beneficios_lowerbrackets.png"]{
+    height: 38%;
+    width: 48%;
+}
+img[src="img/beneficios_spotify.png"]{
+    padding-bottom: .999em;
+    width: 16%;
+    height: 37%; 
+}
+img[src="img/beneficios_streaming.png"]{
+    width: 50%;
+}
+img[src="img/beneficios_estadisticas.png"]{
+ width: 60%;  
+}
+img[src="img/beneficios_equipos.png"]{
+    width: 65%;
+}
+.item .beneficios_titulo{
+    padding-top: .6em;
+    color: #2980b9;
+    font-size: 1em;
+    font-family: 'SanFranciscoText-Light',sans-serif;
+}
+.item .beneficios_descripcion{
+    text-align: justify;
+    color: black;
+    font-size: .83em;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-bottom: 6%;
+    letter-spacing: .008em;
+    font-family: 'SanFranciscoDisplay-Thin',sans-serif;
+}
+/*---------------------------SECTION VIDEO-CONTAINER---------------------------*/
+.videocontainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    padding-top: 20px;
+    background: hsl(193, 12%, 95%);
+}
+.video_titulo_seccion{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 25px;
+    padding: 8px;
+    font-family: 'SanFranciscoText-Light',sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    color: hsl(193, 12%, 15%);
+}
+.video_contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.video{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.video iframe{
+    position: relative;
+    width: 100%;
+    height:  480px;
+}
+.cont_video{
+    width: 95%;
+    justify-content: center;
+}
+/*-----------------------SECTION INFORMACION-----------------------*/
+.informacion{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+        background: #16a085;
+}
+.info_titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    color: hsl(193, 12%, 88%);
+    padding-top: 30px;
+    margin: 0;
+    font-family: 'SanFranciscoText-Light',sans-serif;
+}
+.informacion figure{
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.informacion img{
+    width: 35%;
+    height: auto;
+}
+.informacion figurecaption{
+    color: hsl(193, 12%,100%);    
+    width: 58%;
+    align-self: center;
+    font-size: 1.1em;
+    letter-spacing: .008em;
+/*    border: 5px solid black;*/
+/*    background-color: deepskyblue;*/
+    padding: 15px;
+    font-family: 'SanFranciscoDisplay-Thin',sans-serif;
+/*    font-style: italic;*/
+}
+/*---------------------------EFECTOS DEL MENU---------------------------*/
+.headroom{
+	transition: transform .3s ease;
+}
+.headroom--pinned{
+	transform: translateY(0%);
+}
+.headroom--unpinned{
+	transform: translateY(-100%);
+}
+/*------------------------------------FOOTER------------------------------------*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+    .footer{
+        background-color:#171a1c ;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+    }
+    .footer_descripcion{
+        width: 60%;
+        height: 100%;
+    }
+    .footer_redes{
+        width: 40%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid white;
+    }
+    footer container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer container i{
+        color: white;
+        padding: 10px;
+    }
+    footer container .redes{
+        font-size: 150%;
+        padding-right: 10px;
+    }
+    footer container .redes:hover{
+        font-size: 180%;
+        padding-right: 10px;
+    }
+/*------------------------DISEÑO RESPONSIVE------------------------ */
+/*------------------------------800PX------------------------------*/
+
+@media screen and (max-width: 800px){
+    header .menu{
+        flex-direction: column;
+    }
+    header .menu .logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+    header .menu .logo img{
+        height: 37px;
+    }
+    header .menu .logo .btn-menu{
+        display: inline-block;
+        margin-top: 9px;
+        font-size: 1.2em;
+    }
+    header .menu .enlaces{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content:space-around;
+	}
+    header .menu .enlaces a{
+        display: flex;
+        justify-content: flex-start;
+        border-bottom: 1px solid;
+    }
+    .menu .enlaces a:last-child{
+    border: none;
+    }
+/*-----------------banner fondo-----------------*/
+    .imgfondo1{
+        display: none;
+    }
+    .imgfondo2{
+        display: block;
+    }
+    .banner .fondo img{
+        height: 630px;
+        width: 100%;
+    }
+/*----------------fondo responsive----------------*/
+    .fondo_descripcion{
+    margin-top: -300px;
+    }
+    .descipcion_titulo{
+    font-size: 47px;
+    padding:5%;
+    }
+/*-------------descripcion responvise-------------*/
+    .about_titulo{
+        font-size: 1em;
+    }
+    .about_descripcion{
+    text-align: center;
+    display: block;
+    width: 80%;
+    padding-top: 15px;
+    font-size: .9em;
+    }
+/*--------------beneficios responsive--------------*/
+    .beneficios{
+        width: 100%;
+    }
+    .beneficios_container{
+        padding-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .beneficios_titulo_seccion{
+        font-size: 1em;
+    }
+    .item{
+    width: 28%;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    align-items: center;
+    padding-top: 0;
+    margin-top: 5px;
+    border-radius: 3px;
+    justify-content: space-around;
+    }
+    .item img{
+/*    width: 35%;*/
+        padding-left: .3em;
+        
+    }
+    .item .beneficios_titulo{
+    font-size: .82em;
+    padding-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    color: rgb(0, 174, 237);
+    }
+    .item .container_cbeneficios{
+        width: 50%;
+    }
+    .item .beneficios_descripcion{
+/*    width: 100%;*/
+/*    height: 80%;*/
+    font-size: .84em;
+    letter-spacing: .08em;
+    text-align: justify;
+    color: rgb(119, 119, 119);
+    }
+    
+/*------------------ESTILOS PARA MAIN-CONTAINER------------------*/
+    .main_container{
+        flex-direction: column;
+    }
+    .videocontainer{
+        width: 100%;
+    }
+/*-------------------------VIDEO CONTAINER-------------------------*/
+    .video iframe{
+    position: relative;
+    width: 100%;
+    height:  400px;
+}
+.cont_video{
+    width: 95%;
+    height: 450px;
+    justify-content: center;
+}
+    .video_titulo_seccion{
+    font-size: 35px;
+}
+/*-----------ESTILOS PARA INFORMACION RESPONSIVE-----------*/
+    .informacion{
+        align-items: center;
+    }
+    .conteiner_info_titulo{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .conteiner_info_titulo img{
+        padding-top: 20px;
+    }
+    .info_titulo{
+    font-size: 30px;
+}
+    .informacion figurecaption{
+    width: 85%;
+    font-size: 16px;
+}
+    .informacion img{
+    width: 95%;
+    }
+    figure{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+/*-----------------------ESTILOS PARA FOOTER RESPONSIVE-----------------------*/
+   footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+    .footer{
+        background-color:#171a1c ;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+    }
+    .footer_descripcion{
+        width: 60%;
+        height: 100%;
+    }
+    .footer_redes{
+        width: 40%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid white;
+    }
+    footer container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer container i{
+        color: white;
+        padding: 10px;
+    }
+    footer container .redes{
+        font-size: 130%;
+    }
+}
+
+/*----------------------500PX----------------------*/
+/*---------------------------------------------------*/
+@media screen and (max-width: 600px){
+    .beneficios{
+        width: 100%;
+    }
+    .beneficios_container{
+            padding-bottom: 0;
+        margin-bottom: 0px;
+    }
+    .beneficios_titulo_seccion{
+        font-size: 1em;
+    }
+    .item{
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+/*    border-bottom: 1px solid #ddd;*/
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    margin-bottom: 5px;
+    }
+    .item .beneficios_titulo{
+    padding-top: 5px;
+    font-size: .95em;
+    padding-bottom: 0;
+    }
+    .item .beneficios_descripcion{
+    width: 100%;
+        margin:0;
+        padding: 0;
+        padding-bottom: .8em;
+    font-size: .79em;
+    text-align: justify;
+    color: rgb(119, 119, 119);
+    }
+     .item .container_cbeneficios{
+        width: 80%;
+    }
+/*----------------section video----------------*/
+    .video iframe{
+    position: relative;
+    width: 100%;
+    height:  300px;
+}
+.cont_video{
+    width: 95%;
+    height: 350px;
+    justify-content: center;
+}
+/*-------ESTILOS PARA INFORMACION RESPONSIVE-------*/
+    .conteiner_info_titulo img{
+        padding-top: 0px;
+    }
+    .info_titulo{
+    font-size: 25px;
+}
+    .informacion figurecaption{
+    width: 85%;
+    font-size: 15.3px;
+}
+    .informacion img{
+    width: 85%;
+        padding-bottom: 3%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
